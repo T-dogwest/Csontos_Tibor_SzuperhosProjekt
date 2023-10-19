@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            
-        }
+    internal static class Kepregeny
+    { 
     }
 }
