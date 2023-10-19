@@ -10,7 +10,8 @@ namespace SzuperhosProjekt
     {
         public static void Main(string[] args)
         {
-            
+            Kepregeny.Szereplok("szuperhos.txt");
+            Kepregeny.Szuperhosok();
         }
     }
 }
