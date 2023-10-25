@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    internal class Vasember : Bosszuallo, Milliardos
+    public class Vasember : Bosszuallo, IMilliardos
     {
         public Vasember() : base(150, true)
         {

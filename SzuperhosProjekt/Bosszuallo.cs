@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    internal abstract class Bosszuallo : ISzuperhos
+    public abstract class Bosszuallo : ISzuperhos
     {
         private double szuperero;
         private bool vanEGyengesege;

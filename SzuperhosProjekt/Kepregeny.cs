@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace SzuperhosProjekt
 {
-    internal static class Kepregeny
+    public static class Kepregeny
     {
-        public static List<Milliardos> szuperhosok = new List<Milliardos>();
-
+        public static List<ISzuperhos> szuperhosok = new List<ISzuperhos>();
+        
         public static void Szereplok(string faljnev)
         {
             try
@@ -25,7 +26,7 @@ namespace SzuperhosProjekt
                             string nev = adatok[0];
                             int szam = int.Parse(adatok[1]);
 
-                            Milliardos szuperhos;
+                            ISzuperhos szuperhos;
                             if (nev == "Vasember")
                             {
                                 szuperhos = new Vasember();
@@ -34,13 +35,21 @@ namespace SzuperhosProjekt
                             {
                                 szuperhos = new Batman();
                             }
-
-
                             for (int i = 0; i < szam; i++)
                             {
-                                szuperhos.KutyutKeszit();
+                                if (szuperhos is Vasember)
+                                {
+                                    Vasember vasember = (Vasember)szuperhos;
+                                    vasember.KutyutKeszit();
+                                }
+                                else if (szuperhos is Batman)
+                                {
+                                    Batman batman = (Batman)szuperhos;
+                                    batman.KutyutKeszit();
+                                }
                             }
 
+                            
                             szuperhosok.Add(szuperhos);
                         }
                     }
@@ -55,7 +64,7 @@ namespace SzuperhosProjekt
         }
         public static void Szuperhosok()
         {
-            foreach (Milliardos szuperhos in szuperhosok)
+            foreach (IMilliardos szuperhos in szuperhosok)
             {
                 Console.WriteLine(szuperhos);
             }

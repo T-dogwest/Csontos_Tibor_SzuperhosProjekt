@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    internal interface ISzuperhos
+    public interface ISzuperhos
     {
         bool LegyoziE(ISzuperhos ellenfel);
         double MekkoraAzEreje();
