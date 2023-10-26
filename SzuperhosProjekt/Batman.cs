@@ -19,7 +19,7 @@ namespace SzuperhosProjekt
 
         public bool LegyoziE(ISzuperhos ellenfel)
         {
-            if (ellenfel.MekkoraAzEreje() < Lelemenyesseg * 2)
+            if (ellenfel.MekkoraAzEreje() < Lelemenyesseg )
             {
                 return true;
             }
